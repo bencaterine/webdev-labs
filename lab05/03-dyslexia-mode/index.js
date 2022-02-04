@@ -1,4 +1,13 @@
-/* 
-  See Smashing Magazine Tutorial:
-  https://www.smashingmagazine.com/2021/11/dyslexia-friendly-mode-website/
-*/
+dyslexia = false
+
+const makeDyslexia = () => {
+  if (dyslexia) {
+    document.querySelector("body").className = "";
+    dyslexia = false
+  } else {
+    document.querySelector("body").className = "dyslexia-mode";
+    dyslexia = true
+  }
+};
+
+document.querySelector("#dyslexia-toggle").addEventListener('click', makeDyslexia);
